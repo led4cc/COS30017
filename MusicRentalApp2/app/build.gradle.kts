@@ -8,6 +8,9 @@ plugins {
 android {
     namespace = "com.example.musicrentalapp"
     compileSdk = 36
+    testOptions {
+        animationsDisabled = true
+    }
 
     defaultConfig {
         applicationId = "com.example.musicrentalapp"
@@ -65,4 +68,5 @@ dependencies {
     debugImplementation(libs.androidx.compose.ui.test.manifest)
 
     implementation("androidx.constraintlayout:constraintlayout:2.1.0")
+    implementation("androidx.compose.material:material-icons-extended:<compose_version>")
 }

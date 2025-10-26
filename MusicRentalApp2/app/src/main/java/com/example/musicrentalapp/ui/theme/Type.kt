@@ -1,48 +1,45 @@
 package com.example.musicrentalapp.ui.theme
 
-
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Typography
-import androidx.compose.runtime.Composable
 import androidx.compose.ui.text.TextStyle
-import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
+import androidx.compose.ui.text.font.Font
+import androidx.compose.ui.text.font.FontFamily
 
-// Set of Material typography styles to start with
-val Typography = Typography(
-    bodyLarge = TextStyle(
-        fontFamily = FontFamily.Default,
-        fontWeight = FontWeight.Normal,
-        fontSize = 16.sp,
-        lineHeight = 24.sp,
-        letterSpacing = 0.5.sp
-    )
+import androidx.compose.ui.unit.sp
+import com.example.musicrentalapp.R
 
-
-
-
-    /* Other default text styles to override
-    titleLarge = TextStyle(
-        fontFamily = FontFamily.Default,
-        fontWeight = FontWeight.Normal,
-        fontSize = 22.sp,
-        lineHeight = 28.sp,
-        letterSpacing = 0.sp
-    ),
-    labelSmall = TextStyle(
-        fontFamily = FontFamily.Default,
-        fontWeight = FontWeight.Medium,
-        fontSize = 11.sp,
-        lineHeight = 16.sp,
-        letterSpacing = 0.5.sp
-    )
-    */
+// 🎵 Add handwriting font family
+val FancyFont = FontFamily(
+    Font(R.font.dancing_script_regular, FontWeight.Normal),
+    Font(R.font.dancing_script_bold, FontWeight.Bold)
 )
-val TitleStyle: TextStyle
-    @Composable
-    get() = MaterialTheme.typography.headlineSmall
+// Reuse normal text for the rest
+val Typography = Typography(
+    headlineSmall = TextStyle(
+        fontFamily = FancyFont,
+        fontSize = 28.sp,
+        fontWeight = FontWeight.Bold
+    ),
+    titleLarge = TextStyle(
+        fontFamily = FancyFont,
+        fontSize = 24.sp,
+        fontWeight = FontWeight.SemiBold
+    )
+    // keep other defaults (bodyLarge, labelSmall, etc.)
+)
 
-val CaptionStyle: TextStyle
-    @Composable
-    get() = MaterialTheme.typography.labelMedium
+
+val AppTitleStyle = TextStyle(
+    fontSize = 22.sp,
+    fontWeight = FontWeight.Bold,
+    letterSpacing = 0.2.sp
+)
+
+val PriceStyle = TextStyle(
+    fontSize = 16.sp,
+    fontWeight = FontWeight.Medium
+)
+
+
