@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/movieCard"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp"
+    app:cardUseCompatPadding="true"
+    app:cardBackgroundColor="@color/lbx_dark_soft"
+    app:cardElevation="2dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <!-- Poster placeholder -->
+        <FrameLayout
+            android:layout_width="60dp"
+            android:layout_height="90dp"
+            android:background="@color/lbx_black" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/titleTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Movie title"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="@color/lbx_text_primary" />
+
+            <TextView
+                android:id="@+id/yearGenreTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2024 • Genre"
+                android:textSize="12sp"
+                android:textColor="@color/lbx_text_secondary"
+                android:layout_marginTop="2dp" />
+
+            <TextView
+                android:id="@+id/statusTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Status"
+                android:textSize="12sp"
+                android:textColor="@color/lbx_text_secondary"
+                android:layout_marginTop="2dp" />
+
+            <TextView
+                android:id="@+id/ratingTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="★ 8.5"
+                android:textSize="12sp"
+                android:textColor="@color/lbx_accent_green"
+                android:layout_marginTop="4dp" />
+
+            <TextView
+                android:id="@+id/flagsTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="FAV • BUSTER"
+                android:textSize="12sp"
+                android:textColor="@color/lbx_accent_blue"
+                android:layout_marginTop="2dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>
+
